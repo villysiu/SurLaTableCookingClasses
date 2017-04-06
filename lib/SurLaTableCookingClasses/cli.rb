@@ -29,4 +29,15 @@ class SurLaTableCookingClasses::CLI
     end
   end
 
+  def display_class_details(i)
+    the_class = SurLaTableCookingClasses::CookingClasses.all[i-1]
+    puts "******* #{i}. #{the_class.name} ************"
+    puts "Description:"
+    puts the_class.desc
+    puts ""
+    puts "Menu"
+    puts the_class.menu
+    puts ""
+  end
+
 end
