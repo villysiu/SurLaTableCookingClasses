@@ -11,6 +11,10 @@ class SurLaTableCookingClasses::cooking_classes
     @@all << self
   end
 
+  def self.all
+    @@all.empty? ? scrape_cooking_classes || @@all
+  end
+
   def self.scrape_cooking_classes
     doc = Nokogiri::HTML(open(@@base_url + "category/cat2211278/In+Store+Classes"))
     class_array = doc.css("div.boxsides").first
@@ -20,9 +24,24 @@ class SurLaTableCookingClasses::cooking_classes
       a_class.url = theClass['href']
     end
     @@all
-
   end
 
+  def desc
+    if @desc.nil?
+      class_detail = Nokogiri::HTML(open(@@base_url + "#{self.url}"))
+      @desc = class_detail.css("div.boxsides").children[6].text
+    else
+      @desc
+    end
+  end
 
+  def menu
+    if @menu.nil?
+      class_detail = Nokogiri::HTML(open(@@base_url + "#{self.url}"))
+      @menu = class_detail.css("div.boxsides").children[2].text
+    else
+      @menu
+    end
+  end
 
 end
