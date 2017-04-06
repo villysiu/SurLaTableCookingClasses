@@ -1,4 +1,4 @@
-class SurLaTableCookingClasses::cooking_classes
+class SurLaTableCookingClasses:CookingClasses
   attr_accessor :name, :name, :desc, :menu
   @@all = []
   @@base_url = "http://www.surlatable.com/"
