@@ -1,5 +1,6 @@
-require "SurLaTableCookingClasses/version"
-
-module SurLaTableCookingClasses
-  # Your code goes here...
-end
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
+require_relative './SurLaTableCookingClasses/version'
+require_relative './SurLaTableCookingClasses/cli'
+require_relative './SurLaTableCookingClasses/cooking_classes'
