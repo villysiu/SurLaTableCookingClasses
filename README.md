@@ -8,7 +8,7 @@ This Ruby Gem provides a CLI to view the Customer's Favorite Cooking Classes at 
 
 ## Usage
 
-Type the below and follow the on screen prompts.
+Type the below and follow the on screen prompts
 
   $ SurLaTableCookingClasses
 
