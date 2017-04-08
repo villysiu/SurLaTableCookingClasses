@@ -16,7 +16,7 @@ class SurLaTableCookingClasses::CLI
   def display_menu
     input = nil
     while input != "exit"
-      puts "Enter the [class number] which  you\'d like more details, or enter [list] to see the list again or [exit] to exit."
+      puts "Type the [class number] which  you\'d like more details, or  [list] to see the list again or [exit] to exit. Then press enter"
       input = gets.strip.downcase
       if input == "list"
         list_classes
