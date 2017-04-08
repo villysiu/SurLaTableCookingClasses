@@ -1,7 +1,7 @@
-class SurLaTableCookingClasses:CookingClasses
-  attr_accessor :name, :name, :desc, :menu
+class SurLaTableCookingClasses::CookingClasses
+  attr_accessor :name, :url, :desc, :menu
   @@all = []
-  @@base_url = "http://www.surlatable.com/"
+  @@base_url = "https://www.surlatable.com/"
 
   def initialize(name = nil, url = nil, desc = nil, menu = nil)
     @name = name
@@ -12,7 +12,7 @@ class SurLaTableCookingClasses:CookingClasses
   end
 
   def self.all
-    @@all.empty? ? scrape_cooking_classes || @@all
+    @@all.empty? ? scrape_cooking_classes : @@all
   end
 
   def self.scrape_cooking_classes

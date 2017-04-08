@@ -26,6 +26,7 @@ class SurLaTableCookingClasses::CLI
         display_class_details(input.to_i)
       else
         puts "This is not a valid input. Please try again."
+      end
     end
   end
 
